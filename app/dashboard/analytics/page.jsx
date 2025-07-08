@@ -1,16 +1,17 @@
+import {Suspense} from "react";
+import AnalyticsLoading from "@/app/dashboard/analytics/loading";
 
 const heavyFetch = (timeOut) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve({ data: 'Analytics data loaded successfully!' });
+            resolve({data: 'Analytics data loaded successfully!'});
         }, timeOut);
     });
 };
+ const Analytics = async () => {
 
-const Analytics = async () => {
-    // This will cause the loading.jsx to show while waiting
-    const response = await heavyFetch(10 * 1000);
-    
+    const response = await heavyFetch(3 * 1000);
+
     return (
         <div className="p-8">
             <h1 className="text-2xl font-bold mb-4">Analytics Dashboard</h1>
@@ -35,4 +36,15 @@ const Analytics = async () => {
     );
 };
 
-export default Analytics;
+
+const AnalyticsPage = () => {
+    return (
+        <div>
+            <h1 className={'px-10'}>welcome to analytics dashboard</h1>
+            <Suspense fallback={<AnalyticsLoading/>}>
+            <Analytics/>
+                </Suspense>
+        </div>
+    )
+}
+export default AnalyticsPage;
