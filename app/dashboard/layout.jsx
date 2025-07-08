@@ -7,7 +7,7 @@ const DashboardLayout = ({children}) => {
             <ul className={'flex gap-5 p-4'}>
                 <CustomLink path={'/dashboard'}>Home</CustomLink>
                 <CustomLink path={'/dashboard/contact'}>Contact</CustomLink>
-                <CustomLink path={'/dashboard/about'}>About</CustomLink>
+                <CustomLink path={'/dashboard/about'} preFetch={true}>About</CustomLink>
             </ul>
 
             {children}
