@@ -17,7 +17,7 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              We strive to deliver exceptional products and services that exceed our customers' 
+              We strive to deliver exceptional products and services that exceed our customers&apos; 
               expectations. Through continuous innovation and a commitment to excellence, we aim 
               to be at the forefront of technological advancement.
             </p>

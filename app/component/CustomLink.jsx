@@ -9,7 +9,7 @@ const CustomLink = ({path,children}) => {
     console.log(currentPath);
     const textColor = currentPath === path ? 'text-blue-500' : 'text-white';
     return (
-       <Link className={textColor} href={path}>{children}</Link>
+       <Link className={textColor} href={path} prefetch={true}>{children}</Link>
     )
 }
 export default CustomLink;
