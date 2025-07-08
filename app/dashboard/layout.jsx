@@ -1,12 +1,13 @@
 import Link from "next/link";
+import CustomLink from "@/app/component/CustomLink";
 
 const DashboardLayout = ({children}) => {
     return (
         <>
             <ul className={'flex gap-5 p-4'}>
-                <Link href={'/'}>Home</Link>
-                <Link href={'/contact'}>Contact</Link>
-                <Link href={'/about'}>About</Link>
+                <CustomLink path={'/dashboard'}>Home</CustomLink>
+                <CustomLink path={'/dashboard/contact'}>Contact</CustomLink>
+                <CustomLink path={'/dashboard/about'}>About</CustomLink>
             </ul>
 
             {children}
