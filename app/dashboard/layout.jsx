@@ -8,6 +8,7 @@ const DashboardLayout = ({children}) => {
                 <CustomLink path={'/dashboard'}>Home</CustomLink>
                 <CustomLink path={'/dashboard/contact'}>Contact</CustomLink>
                 <CustomLink path={'/dashboard/about'} preFetch={true}>About</CustomLink>
+                <CustomLink path={'/dashboard/analytics'}>Analytics</CustomLink>
             </ul>
 
             {children}
